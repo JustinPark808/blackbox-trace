@@ -11,3 +11,7 @@ sudo cp audit.rules /etc/audit/rules.d/
 # Read the defined rules into auditd using auditctl
 echo '***auditctl is reading rules from /etc/audit/rules.d/audit.rules...'
 sudo auditctl -R /etc/audit/rules.d/audit.rules
+
+# Install required modules for python3
+echo '***pip3 is installing required packages...'
+sudo pip3 -r ../trace/requirements.txt
