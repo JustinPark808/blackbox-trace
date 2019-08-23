@@ -65,9 +65,11 @@ class SystemCallTracer:
                         stderr=PIPE,
                         shell=True)
 
-        # The format_str given to strftime() is the format in which
+        # The time_format_str given to strftime() is the format in which
         # ausearch expects time arguments
         time_format_str = '%m/%d/%Y %H:%M:%S'
+
+        # Set the last_traced_time to the current time
         last_traced_time = datetime.now().strftime(time_format_str)
 
         # Get the system calls made by the given pid as often as

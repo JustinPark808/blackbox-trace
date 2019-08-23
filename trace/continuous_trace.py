@@ -8,7 +8,7 @@ def main():
     """Main function."""
     # Define the ArgumentParser to accept a pid
     parser = argparse.ArgumentParser(
-            description='Print the 50 most recent system calls every second')
+            description='Print the last 50 system calls every second')
     parser.add_argument(
             'trace_pid',
             nargs=1,
@@ -21,7 +21,7 @@ def main():
     # Initialize a system call tracer with the given pid
     system_call_tracer = SystemCallTracer(trace_pid)
 
-    # Every second, print the 50 most recent system calls
+    # Every second, print the last 50 system calls
     while True:
         time.sleep(1)
         system_call_tracer.print_trace()
