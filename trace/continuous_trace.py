@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import argparse
-from systemcalltracer import SystemCallTracer
+from system_call_tracer import SystemCallTracer
 import time
 
 def main():
